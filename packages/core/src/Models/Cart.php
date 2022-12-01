@@ -246,8 +246,16 @@ class Cart extends BaseModel
     public function calculate(): Cart
     {
         $cart = app(Pipeline::class)
-        ->send($this)
-        ->through(
+        ->send($this->load([
+            'currency',
+            'lines.purchasable.product',
+            'lines.purchasable.prices.currency',
+            'lines.purchasable.prices.priceable',
+            'lines.purchasable.taxClass',
+            'lines.cart',
+            // 'shippingAddress',
+            // 'billingAddress',
+        ]))->through(
             config('lunar.cart.pipelines.cart', [
                 Calculate::class,
             ])

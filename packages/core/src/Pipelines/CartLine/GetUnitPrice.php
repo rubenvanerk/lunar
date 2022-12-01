@@ -28,7 +28,6 @@ class GetUnitPrice
 
         $priceResponse = Pricing::currency($cart->currency)
             ->qty($cartLine->quantity)
-            ->currency($cart->currency)
             ->customerGroups($customerGroups)
             ->for($purchasable)
             ->get();
