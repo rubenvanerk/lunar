@@ -15,7 +15,7 @@
                @class([
                    'menu-link group',
                    'menu-link--active' => Str::contains(request()->url(), 'settings'),
-                   'menu-link--inactive !text-gray-700' => !Str::contains(
+                   'menu-link--inactive' => !Str::contains(
                        request()->url(),
                        'settings'
                    ),

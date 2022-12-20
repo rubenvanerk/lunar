@@ -29,7 +29,7 @@
   } */
 
   .menu-link--inactive {
-    @apply text-gray-300 hover:bg-blue-50 hover:text-blue-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white;
+    @apply text-gray-300 hover:bg-gray-700 hover:text-white  bg-gray-800;
   }
 }
 
