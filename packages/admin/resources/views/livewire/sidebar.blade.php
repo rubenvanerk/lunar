@@ -10,18 +10,19 @@
                            'menu-link--active' => $item->isActive(
                                $component->attributes->get('current')
                            ),
-                           'menu-link--inactive !text-gray-700' => !$item->isActive(
+                           'menu-link--inactive' => !$item->isActive(
                                $component->attributes->get('current')
                            ),
                        ])>
                         <span x-cloak
+                            class="menu-link__icon"
                               :class="{ 'mx-auto': !showExpandedMenu }">
                             {!! $item->renderIcon('w-5 h-5') !!}
                         </span>
 
                         <span x-cloak
                               x-show="showExpandedMenu"
-                              class="text-sm font-medium"
+                              class="text-sm"
                               :class="{
                                   'absolute left-[calc(100%_+_4px)] m-auto bg-black z-50 text-white rounded py-1.5 px-3 group-hover:!block':
                                       !showExpandedMenu,
@@ -50,11 +51,12 @@
                                            'menu-link--active' => $item->isActive(
                                                $component->attributes->get('current')
                                            ),
-                                           'menu-link--inactive !text-gray-700' => !$item->isActive(
+                                           'menu-link--inactive' => !$item->isActive(
                                                $component->attributes->get('current')
                                            ),
                                        ])>
                                         <span x-cloak
+                                              class="menu-link__icon"
                                               :class="{ 'mx-auto': !showExpandedMenu }">
                                             {!! $item->renderIcon('w-5 h-5') !!}
                                         </span>
@@ -105,11 +107,12 @@
                                            'menu-link--active' => $section->isActive(
                                                $component->attributes->get('current')
                                            ),
-                                           'menu-link--inactive !text-gray-700' => !$section->isActive(
+                                           'menu-link--inactive' => !$section->isActive(
                                                $component->attributes->get('current')
                                            ),
                                        ])>
                                         <span x-cloak
+                                              class="menu-link__icon"
                                               :class="{ 'mx-auto': !showExpandedMenu }">
                                             {!! $section->renderIcon('w-5 h-5') !!}
                                         </span>

@@ -13,15 +13,23 @@
 
 @layer components {
   .menu-link {
-    @apply relative flex items-center gap-2 p-2 rounded;
+    @apply relative flex items-center gap-2 px-2 py-1 rounded;
   }
 
   .menu-link--active {
-    @apply bg-blue-50 text-blue-700 dark:bg-gray-800 dark:text-white;
+      @apply text-white font-semibold bg-blue-600 text-white;
   }
 
+  .menu-link .menu-link__icon {
+      @apply p-1 rounded;
+  }
+
+  /* .menu-link--active .menu-link__icon {
+    @apply bg-blue-600 text-white;
+  } */
+
   .menu-link--inactive {
-    @apply text-gray-500 hover:bg-blue-50 hover:text-blue-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white;
+    @apply text-gray-300 hover:bg-blue-50 hover:text-blue-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white;
   }
 }
 

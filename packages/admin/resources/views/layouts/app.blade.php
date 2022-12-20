@@ -65,7 +65,7 @@
 
     <div class="flex w-full h-full">
         <div
-            class="bg-white w-64 fixed h-full border-r border-gray-100 dark:bg-gray-900 dark:border-gray-800"
+            class="bg-gray-800 w-64 fixed h-full border-r border-gray-100 dark:bg-gray-900 dark:border-gray-800"
             :class="{
                 'w-64': showExpandedMenu,
                 'w-20': !showExpandedMenu
@@ -91,13 +91,24 @@
         </div>
 
         <div
-            class="bg-blue-500 grow"
+            class="grow"
             :class="{
                 'lg:pl-64': showExpandedMenu,
                 'lg:pl-20': !showExpandedMenu
             }"
         >
-            Main Content
+            <main class="flex flex-1 overflow-hidden">
+                <section class="flex-1 h-full min-w-0 overflow-y-auto lg:order-last">
+                    @include('adminhub::partials.navigation.header')
+                    <div class="px-4 py-8 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
+                        @yield('main', $slot)
+                    </div>
+                </section>
+
+                @if ($menu ?? false)
+                    @include('adminhub::partials.navigation.side-menu-nested')
+                @endif
+            </main>
         </div>
     </div>
 

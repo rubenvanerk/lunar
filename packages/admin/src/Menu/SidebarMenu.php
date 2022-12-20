@@ -91,21 +91,71 @@ class SidebarMenu
                 ->icon('cash');
         });
 
-        $salesGroup->addItem(function ($menuItem) {
-            $menuItem
-                ->name(__('adminhub::menu.sidebar.customers'))
-                ->handle('hub.customers')
-                ->route('hub.customers.index')
-                ->icon('users');
-        });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.customers'))
+//                 ->handle('hub.customers')
+//                 ->route('hub.customers.index')
+//                 ->icon('users');
+//         });
+//
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
+//         $salesGroup->addItem(function ($menuItem) {
+//             $menuItem
+//                 ->name(__('adminhub::menu.sidebar.discounts'))
+//                 ->handle('hub.discounts')
+//                 ->route('hub.discounts.index')
+//                 ->icon('ticket');
+//         });
 
-        $salesGroup->addItem(function ($menuItem) {
-            $menuItem
-                ->name(__('adminhub::menu.sidebar.discounts'))
-                ->handle('hub.discounts')
-                ->route('hub.discounts.index')
-                ->icon('ticket');
-        });
 
         return $this;
     }
