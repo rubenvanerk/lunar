@@ -54,7 +54,7 @@
     @livewireStyles
 </head>
 
-<body class="h-full overflow-hidden antialiased bg-gray-50 dark:bg-gray-900"
+<body class="antialiased h-full bg-gray-50 dark:bg-gray-900"
       :class="{ 'dark': darkMode }"
       x-data="{
           showExpandedMenu: $persist(false),
@@ -63,6 +63,48 @@
       }">
     {!! \Lunar\Hub\LunarHub::paymentIcons() !!}
 
+    <div class="flex w-full h-full">
+        <div
+            class="bg-white w-64 fixed h-full border-r border-gray-100 dark:bg-gray-900 dark:border-gray-800"
+            :class="{
+                'w-64': showExpandedMenu,
+                'w-20': !showExpandedMenu
+            }"
+        >
+            @include('adminhub::partials.navigation.side-menu')
+
+            <div class="p-4 border-t border-gray-100 shrink-0">
+                <p class="text-xs text-center text-gray-500">
+                    <span x-cloak x-show="showExpandedMenu">
+                        Lunar
+                    </span>
+
+                    <x-hub::lunar.version />
+                </p>
+            </div>
+
+            <button x-on:click="showExpandedMenu = !showExpandedMenu" class="absolute z-50 p-1 -ml-[11px] text-gray-600 bg-white border border-gray-200 rounded left-full bottom-16">
+                <span :class="{ '-rotate-180': showExpandedMenu }" class="block">
+                    <x-hub::icon ref="chevron-right" class="w-3 h-3" style="solid" />
+                </span>
+            </button>
+        </div>
+
+        <div
+            class="bg-blue-500 grow"
+            :class="{
+                'lg:pl-64': showExpandedMenu,
+                'lg:pl-20': !showExpandedMenu
+            }"
+        >
+            Main Content
+        </div>
+    </div>
+
+    {{-- <div class="flex h-full">
+        @include('adminhub::partials.navigation.side-menu')
+    </div> --}}
+{{--
     <div class="flex h-full">
         @include('adminhub::partials.navigation.side-menu-mobile')
 
@@ -101,7 +143,7 @@
         @endforeach
     @endif
 
-    <script src="{{ asset('vendor/lunar/admin-hub/app.js') }}"></script>
+    <script src="{{ asset('vendor/lunar/admin-hub/app.js') }}"></script> --}}
 </body>
 
 </html>
