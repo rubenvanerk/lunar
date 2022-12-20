@@ -3,7 +3,7 @@
         <x-hub::branding.logo x-cloak x-show="showExpandedMenu" />
         <x-hub::branding.logo x-cloak x-show="!showExpandedMenu" iconOnly />
     </a>
-    <div class="grow h-full overflow-y-auto order-t border-gray-100 dark:border-gray-800 py-4">
+    <div class="grow h-full order-t border-gray-100 dark:border-gray-800 py-4">
         @livewire('sidebar')
     </div>
     @if (Auth::user()->can('settings'))
